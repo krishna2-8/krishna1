@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsha Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #b67520;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background: transparent;
+        }
+        .nav-link {
+            color: white;
+            user-select: text;
+            transition: color 0.3s;
+        }
+        .nav-link:hover, .nav-link:focus, .nav-link.active {
+            color: #48cae4 !important;
+        }
+        .btn-custom {
+            background-color: white;
+            color: #1d3557;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-custom:active, .btn-custom:hover {
+            background-color: #48cae4;
+            color: white;
+        }
+        .hero-section {
+            text-align: left;
+            padding: 100px 50px;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            user-select: text;
+        }
+        .hero-section h1:hover {
+            color: #48cae4;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            user-select: text;
+        }
+        .icon {
+            font-size: 1.5rem;
+            color: white;
+            transition: color 0.3s;
+        }
+        .icon:hover {
+            color: #48cae4;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">ARSHA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-home icon"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-info-circle icon"></i> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cogs icon"></i> Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-briefcase icon"></i> Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-users icon"></i> Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-tags icon"></i> Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-blog icon"></i> Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope icon"></i> Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-custom" href="#"><i class="fas fa-arrow-right icon"></i> Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero-section">
+        <div class="container">
+            <h1>Better Solutions For Your Business</h1>
+            <p>We are a team of talented designers making websites with Bootstrap</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll(".nav-link").forEach(link => {
+            link.addEventListener("click", function() {
+                document.querySelectorAll(".nav-link").forEach(nav => nav.classList.remove("active"));
+                this.classList.add("active");
+            });
+        });
+    </script>
+</body>
+</html>
